@@ -214,12 +214,6 @@ app.post('/api/applications', async (req, res) => {
     res.send(result);
 })
 
-// company related apis
-// app.get('/api/companies', async (req, res) => {
-//     const cursor = companyCollection.find().skip(4);
-//     const result = await cursor.toArray();
-//     res.send(result);
-// })
 
 // inefficient way to join/aggregate collection
 app.get('/api/companies', verifyToken, verifyAdmin, async (req, res) => {
@@ -346,15 +340,6 @@ app.post('/api/subscriptions', async (req, res) => {
     res.send(updateResult)
 })
 
-// Send a ping to confirm a successful connection
-// await client.db("admin").command({ ping: 1 });
-//         console.log("Pinged your deployment. You successfully connected to MongoDB!");
-//     } finally {
-//         // Ensures that the client will close when you finish/error
-//         // await client.close();
-//     }
-// }
-// run().catch(console.dir);
 
 
 
