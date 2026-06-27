@@ -93,7 +93,7 @@ const verifyToken = async (req, res, next) => {
 
 // must be used after verifyToken middleware
 const verifySeeker = async (req, res, next) => {
-    if (req.user?.role !== 'seeker') {
+    if (req.user?.userRole !== 'seeker') {
         return res.status(403).send({ message: 'forbidden access' })
     }
     next();
