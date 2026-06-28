@@ -104,7 +104,7 @@ const verifyRecruiter = async (req, res, next) => {
     if (req.user?.role !== 'recruiter') {
         return res.status(403).send({ message: 'forbidden access' })
     }
-    // next();
+    next();
 }
 
 // must be used after verifyToken middleware
@@ -346,7 +346,7 @@ app.post('/api/subscriptions', async (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Example app listening  port ${port}`)
 })
 
 module.exports = app;
