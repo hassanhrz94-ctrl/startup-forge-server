@@ -346,7 +346,7 @@ app.post('/api/subscriptions', async (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Example app listening  port ${port}`)
+    console.log(`Example app listening on port ${port}`)
 })
 
 module.exports = app;
