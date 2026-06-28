@@ -104,7 +104,7 @@ const verifyRecruiter = async (req, res, next) => {
     if (req.user?.role !== 'recruiter') {
         return res.status(403).send({ message: 'forbidden access' })
     }
-    next();
+    // next();
 }
 
 // must be used after verifyToken middleware
